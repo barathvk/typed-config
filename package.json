@@ -1,6 +1,6 @@
 {
-  "name": "@barath/typed-config",
-  "version": "0.1.24",
+  "name": "@lennonsaves/typed-config",
+  "version": "0.1.25",
   "private": false,
   "main": "build/src/index.js",
   "repository": "https://github.com/barathvk/typed-config",
