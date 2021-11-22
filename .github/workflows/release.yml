@@ -20,12 +20,11 @@ jobs:
       - run: yarn test
       - run: git config --global user.email "${{ github.event.pusher.email }}"
       - run: git config --global user.name "${{ github.event.pusher.name }}"
-      - run: yarn standard-version
+      - run: yarn release
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
       - uses: ad-m/github-push-action@master
         with:
           tags: true
           branch: main
           github_token: ${{ secrets.GITHUB_TOKEN }}
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
