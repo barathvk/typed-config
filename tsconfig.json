@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "./build",
+    "skipLibCheck": true,
+    "rootDirs": [
+      "./src",
+      "./test"
+    ],
+    "lib": [
+      "esnext"
+    ],
+    "target": "ESNext",
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
+    "module": "commonjs",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noUnusedLocals": true,
+    "jsx": "react",
+    "declaration": true,
+    "resolveJsonModule": true
+  }
+}
