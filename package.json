@@ -1,5 +1,5 @@
 {
-  "name": "@lennonsaves/typed-config",
+  "name": "@barath/typed-config",
   "version": "0.1.26",
   "private": false,
   "main": "build/src/index.js",
