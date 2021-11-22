@@ -3,16 +3,16 @@ name: release
 on:
   push:
     branches:
-      - "master"
+      - "main"
     tags:
       - "!*"
 
 jobs:
   release:
-    runs-on: [self-hosted]
-    container: node:latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
       - run: git config --global user.email "${{ github.event.pusher.email }"
       - run: git config --global user.name "${{ github.event.pusher.name }"
       - run: yarn --frozen-lockfile
