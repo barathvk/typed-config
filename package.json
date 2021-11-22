@@ -9,7 +9,7 @@
     "test": "jest",
     "build": "tsc && rm -rf build/test",
     "prepack": "tsc",
-    "release": "standard-version && npm publish --access public"
+    "release": "standard-version && npm_config_registry=https://registry.npmjs.org/ npm publish --access public"
   },
   "files": [
     "/src",
