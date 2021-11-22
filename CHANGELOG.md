@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.27](https://github.com/barathvk/typed-config/compare/v0.1.26...v0.1.27) (2021-11-22)
+
+
+### Bug Fixes
+
+* change package nmespace ([6b4013b](https://github.com/barathvk/typed-config/commit/6b4013b1d7a2a38458f4e0a8f74d64f6aecbabfa))
+* cleanup CI file ([3ac70c2](https://github.com/barathvk/typed-config/commit/3ac70c2cc4eca7c9827eb065aab6113d1074a327))
+
 ### [0.1.26](https://github.com/barathvk/typed-config/compare/v0.1.25...v0.1.26) (2021-11-22)
 
 ### [0.1.25](https://github.com/barathvk/typed-config/compare/v0.1.24...v0.1.25) (2021-11-22)
