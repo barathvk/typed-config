@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.32 (2021-11-22)
+
+
+### Bug Fixes
+
+* bump version ([b01c0f0](https://github.com/barathvk/typed-config/commit/b01c0f0e673320109f044d913a98e736a06f1166))
+
 ### 0.1.30 (2021-11-22)
 
 
