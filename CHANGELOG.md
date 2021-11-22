@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.30 (2021-11-22)
+
+
+### Bug Fixes
+
+* change node version ([55b9270](https://github.com/barathvk/typed-config/commit/55b9270808fc8a336a16852038cddb15fdad3b41))
+
 ### 0.1.29 (2021-11-22)
 
 ### 0.1.28 (2021-11-22)
