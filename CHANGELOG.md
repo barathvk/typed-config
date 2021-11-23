@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.35 (2021-11-23)
+
+
+### Bug Fixes
+
+* handle not found ([ba8ad57](https://github.com/barathvk/typed-config/commit/ba8ad57ddd6b163966816d83deca6cb5c1e7b05b))
+
 ### 0.1.34 (2021-11-23)
 
 
