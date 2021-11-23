@@ -32,7 +32,10 @@ export const readAndMergeConfigFiles = () => {
       )
     )
   }
-  return merge(defaultConfig, overrideConfig)
+  const overwriteMerge = (destinationArray, sourceArray, options) => sourceArray
+  return merge(defaultConfig, overrideConfig, {
+    arrayMerge: overwriteMerge,
+  })
 }
 export const loadConfig = <T extends object>(
   schema: new () => T,
