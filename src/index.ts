@@ -63,10 +63,19 @@ export const loadConfig = <T extends object>(
         } else {
           const substitution = match[2]
           const value = plugin.getValue(substitution)
-          flattened[flKey] = (flattened[flKey] as string).replace(
-            match[0],
-            value.toString()
-          )
+          if (value) {
+            flattened[flKey] = (flattened[flKey] as string).replace(
+              match[0],
+              value.toString()
+            )
+          }
+          else {
+            const error = new ValidationError()
+            error.constraints = {
+              plugins: `Failed to find value ${protocol}: ${match}`,
+            }
+            errors.push(error)
+          }
         }
       }
     }
