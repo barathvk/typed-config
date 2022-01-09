@@ -11,30 +11,30 @@ Configuration management is hard.
 
   ## How?
 
-    * Create a `./config` directory in your project root
-    * Add a `default.yml` in this folder and populate it with your configuration
-      ```yaml
-      # example for `bunyan` logger config
-      logger:
-        name: my-awesome-project
-        level: info
-      ```
-    * Create a class that represents your configuration using the amazing `class-validator to define validations
-      ```typescript
-      import { IsDefined } from 'class-validator'
-      import { LoggerOptions } from 'bunyan'
-      export class Config {
-        @IsDefined()
-        logger: LoggerOptions
-      }
-      ```
-    * In the `index.ts` (or whatever your `main` file is) load the config
-    ```typescript
-    import { loadConfig } from '@barath/typed-config'
-    import { Config } from './lib/config'
-    import bunyan from 'bunyan'
-    export const config = loadConfig(Config)
-    export const logger = bunyan.createLogger(config.logger)
-    
-    logger.info('hello world')
-    ```
+   * Create a `./config` directory in your project root
+   * Add a `default.yml` in this folder and populate it with your configuration
+     ```yaml
+     # example for `bunyan` logger config
+     logger:
+       name: my-awesome-project
+       level: info
+     ```
+   * Create a class that represents your configuration using the amazing `class-validator to define validations
+     ```typescript
+     import { IsDefined } from 'class-validator'
+     import { LoggerOptions } from 'bunyan'
+     export class Config {
+       @IsDefined()
+       logger: LoggerOptions
+     }
+     ```
+   * In the `index.ts` (or whatever your `main` file is) load the config
+   ```typescript
+   import { loadConfig } from '@barath/typed-config'
+   import { Config } from './lib/config'
+   import bunyan from 'bunyan'
+   export const config = loadConfig(Config)
+   export const logger = bunyan.createLogger(config.logger)
+
+   logger.info('hello world')
+   ```
