@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.37](https://github.com/barathvk/typed-config/compare/v0.1.35...v0.1.37) (2022-04-15)
+
+
+### Bug Fixes
+
+* README formatting ([79349d2](https://github.com/barathvk/typed-config/commit/79349d29b0aaaba8823fecf1341b3e8186bfab6e))
+
+### [0.1.36](https://github.com/barathvk/typed-config/compare/v0.1.35...v0.1.36) (2022-04-15)
+
+
+### Bug Fixes
+
+* README formatting ([79349d2](https://github.com/barathvk/typed-config/commit/79349d29b0aaaba8823fecf1341b3e8186bfab6e))
+
 ### 0.1.35 (2021-11-23)
 
 

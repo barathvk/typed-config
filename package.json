@@ -1,6 +1,6 @@
 {
   "name": "@barath/typed-config",
-  "version": "0.1.35",
+  "version": "0.1.37",
   "private": false,
   "main": "build/src/index.js",
   "repository": "https://github.com/barathvk/typed-config",
@@ -49,7 +49,7 @@
     "typescript": "^4.4.4"
   },
   "dependencies": {
-    "class-transformer": "^0.4.0",
+    "class-transformer": "^0.5.1",
     "class-validator": "^0.13.1",
     "deasynchronize": "^1.0.1",
     "deepmerge": "^4.2.2",
