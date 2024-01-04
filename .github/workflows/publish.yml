@@ -1,0 +1,26 @@
+name: publish packages
+on: 
+  push: 
+    branches: 
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+      - name: setup node
+        uses: actions/setup-node@v4
+      - name: setup pnpm
+        uses: pnpm/action-setup@v2
+      - name: install dependencies
+        run: pnpm install
+      - name: publish
+        uses: changesets/action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore: update CHANGELOG.md [skip ci]'
