@@ -18,6 +18,8 @@ jobs:
           version: 8
       - name: install dependencies
         run: pnpm install
+      - name: test
+        run: pnpm test
       - name: publish
         uses: changesets/action@v1
         env:
