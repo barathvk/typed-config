@@ -1,9 +1,13 @@
 {
   "name": "@typed-config/core",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": false,
   "main": "src/index.ts",
   "type": "module",
+  "repository": "github:barathvk/typed-config",
+  "files": [
+    "src"
+  ],
   "devDependencies": {
     "@types/flat": "^5.0.5",
     "@types/js-yaml": "^4.0.9",

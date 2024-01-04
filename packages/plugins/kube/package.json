@@ -1,9 +1,13 @@
 {
   "name": "@typed-config/kube",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": false,
   "main": "src/index.ts",
   "type": "module",
+  "repository": "github:barathvk/typed-config",
+  "files": [
+    "src"
+  ],
   "dependencies": {
     "@typed-config/core": "workspace:*",
     "@kubernetes/client-node": "^1.0.0-rc4",
