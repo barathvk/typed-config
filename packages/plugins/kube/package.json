@@ -1,0 +1,18 @@
+{
+  "name": "@typed-config/kube",
+  "version": "0.0.0",
+  "private": false,
+  "main": "src/index.ts",
+  "type": "module",
+  "dependencies": {
+    "@typed-config/core": "workspace:*",
+    "@kubernetes/client-node": "^1.0.0-rc4",
+    "atob": "^2.1.2",
+    "undici": "^6.2.1"
+  },
+  "devDependencies": {
+    "fs-extra": "^11.2.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/atob": "^2.1.4"
+  }
+}

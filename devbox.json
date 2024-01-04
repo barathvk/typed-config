@@ -1,0 +1,25 @@
+{
+  "packages": [
+    "zsh@latest",
+    "zsh-autosuggestions@latest",
+    "zsh-syntax-highlighting@latest",
+    "zsh-completions@latest",
+    "starship@latest",
+    "git@latest",
+    "openssh@latest",
+    "nodejs@latest",
+    "corepack@latest"
+  ],
+  "env": {
+    "XDG_CONFIG_HOME": "${PWD}/.shell",
+    "ZDOTDIR":         "${PWD}/.shell",
+    "STARSHIP_CONFIG": "${PWD}/.shell/starship.toml",
+    "PATH":            "${PWD}/.devbox/bin:$PATH"
+  },
+  "shell": {
+    "init_hook": [
+      "echo '󱠡 welcome to typed-config!'",
+      "exec zsh -l"
+    ]
+  }
+}

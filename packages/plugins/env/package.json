@@ -1,0 +1,14 @@
+{
+  "name": "@typed-config/env",
+  "version": "0.0.0",
+  "private": false,
+  "main": "src/index.ts",
+  "type": "module",
+  "dependencies": {
+    "@typed-config/core": "workspace:*"
+  },
+  "devDependencies": {
+    "fs-extra": "^11.2.0",
+    "@types/fs-extra": "^11.0.4"
+  }
+}
