@@ -39,8 +39,23 @@ export const kubePlugin: IBasePlugin = {
         namespace = 'default'
       }
       const dataKey = split[1]
-      const secret = await api.readNamespacedSecret({ name: secretName, namespace })
-      return secret?.data?.data ? atob(secret.data.data[dataKey]) : undefined
+      let secret: k8s.V1Secret
+      if (process.versions.bun) {
+        const server = kc.getCurrentCluster()?.server
+        const opts = {}
+        await kc.applyToFetchOptions(opts)
+        secret = await fetch(
+        `${server}/api/v1/namespaces/${namespace}/secrets/${secretName}`,
+        // @ts-expect-error - this fails in nodejs but works in bun
+        { tls: { rejectUnauthorized: false }, ...opts }
+        )
+          .then(async (resp) => await resp.json())
+          .then((resp) => resp as k8s.V1Secret)
+        return secret?.data?.data ? atob(secret.data.data[dataKey]) : undefined
+      } else {
+        secret = await api.readNamespacedSecret({ name: secretName, namespace })
+        return secret?.data ? atob(secret.data[dataKey]) : undefined
+      }
     } catch (error) {
       const err = error as Error
       console.error(`[${key}] (context: ${kc.currentContext}) ${err.message}`)

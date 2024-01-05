@@ -1,4 +1,4 @@
-HISTFILE=${PWD}/.config/zsh/.zsh_history
+HISTFILE=${PWD}/.shell/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 
