@@ -51,11 +51,10 @@ export const kubePlugin: IBasePlugin = {
         )
           .then(async (resp) => await resp.json())
           .then((resp) => resp as k8s.V1Secret)
-        return secret?.data?.data ? atob(secret.data.data[dataKey]) : undefined
       } else {
         secret = await api.readNamespacedSecret({ name: secretName, namespace })
-        return secret?.data ? atob(secret.data[dataKey]) : undefined
       }
+      return secret?.data ? atob(secret.data[dataKey]) : undefined
     } catch (error) {
       const err = error as Error
       console.error(`[${key}] (context: ${kc.currentContext}) ${err.message}`)
