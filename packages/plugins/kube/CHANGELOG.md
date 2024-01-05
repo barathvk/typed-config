@@ -1,5 +1,11 @@
 # @typed-config/kube
 
+## 0.2.0
+
+### Minor Changes
+
+- dc5490d: return correct value under bun
+
 ## 0.1.0
 
 ### Minor Changes
