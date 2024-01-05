@@ -5,8 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "NODE_OPTIONS='--no-deprecation' vitest --reporter=default",
-    "publish": ""
+    "test": "NODE_OPTIONS='--no-deprecation' vitest --reporter=default"
   },
   "dependencies": {
     "zod": "^3.22.4"
