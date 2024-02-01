@@ -1,11 +1,11 @@
 import merge from 'deepmerge'
 import { config as dotenvConfig } from 'dotenv'
-import findConfig from 'find-config'
 import { flatten, unflatten } from 'flat'
 import fs from 'fs'
 import yaml from 'js-yaml'
 import path from 'path'
 import { type z } from 'zod'
+import findup from 'findup-sync'
 
 let config
 
@@ -37,7 +37,7 @@ export const loadConfig = async (
   dir: string = path.resolve(process.cwd(), 'config')
 ) => {
   if (!config || process.env.NODE_ENV === 'test') {
-    dotenvConfig({ path: findConfig('.env') ?? '.env' })
+    dotenvConfig({ path: findup('.env') ?? '.env' })
     await Promise.all(
       plugins
         .map(async (plugin) => { plugin.init ? await plugin.init() : undefined })
