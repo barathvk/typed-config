@@ -4,7 +4,7 @@ import { flatten, unflatten } from 'flat'
 import fs from 'fs'
 import yaml from 'js-yaml'
 import path from 'path'
-import { type z } from 'zod'
+import type { z } from 'zod'
 import findup from 'findup-sync'
 
 let config
